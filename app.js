@@ -6,14 +6,14 @@ const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const compression = require("compression");
 
-//Start express app
+// Start express app
 const app = express();
 
-//Global middleware
+// Global middleware
 app.use(morgan("dev")); //development logging
 app.use(helmet()); //set http security headers
 
-//limit requests
+// limit requests
 const limiter = rateLimit({
   max: 100,
   windowMs: 60 * 60 * 1000,
@@ -21,7 +21,7 @@ const limiter = rateLimit({
 });
 app.use("/api", limiter);
 
-//body parser
+// body parser
 app.use(express.json({ limit: "10kb" }));
 app.use(express.urlencoded({ extended: true, limit: "10kb" }));
 
@@ -31,9 +31,9 @@ app.use(mongoSanitize());
 // data sanitization against XSS
 app.use(xss());
 
-//compression
+// compression
 app.use(compression());
 
-//Routes
+// Routes
 
 module.exports = app;
