@@ -4,7 +4,7 @@
   "description": "A simple REST CRUD API",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "NODE_ENV=production node server.js",
     "dev": "nodemon server.js"
   },
   "author": "anhrv",
@@ -16,6 +16,7 @@
     "express-mongo-sanitize": "^2.2.0",
     "express-rate-limit": "^6.7.0",
     "helmet": "^7.0.0",
+    "hpp": "^0.2.3",
     "mongoose": "^7.1.1",
     "morgan": "^1.10.0",
     "xss-clean": "^0.1.1"
