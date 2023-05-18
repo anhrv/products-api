@@ -39,6 +39,10 @@ By specifying the _page_ and _limit_ parameters you can limit the number of prod
 
 You can also filter the products by any of it's existing parameter. **/api/v1/products?brand=Samsung** will return only the Samsung products.
 
+#### Top 10
+
+You can get the top 10 highest rated products by going to **/api/v1/products/top-10**
+
 ### GET One
 
 To get one product, specify the ID of the product at the end of the URL.
