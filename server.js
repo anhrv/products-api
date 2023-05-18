@@ -23,6 +23,7 @@ mongoose
   .then(() => console.log("DATABASE CONNECTION SUCCESSFUL"));
 
 // server setup
+console.log(process.env);
 const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
   console.log(`LISTENING FOR REQUEST ON PORT ${port}`);
