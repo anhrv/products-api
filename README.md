@@ -11,7 +11,7 @@ I put an effort to follow good coding practices, such as clean code, MVC archite
 3. Inside the config.env file put the following variables:
    - DATABASE=_your database connection string_
    - PORT=_your port of choice, default is 3000_
-4. In the terminal run _npm init_.
+4. In the terminal run _npm install_.
 
 I have included some mock data in the _data_ folder from [DummyJSON](https://dummyjson.com/). If you wish to import this data into your database, run the command _npm run import-data_. You can also delete all data in your database with the command _npm run delete-data_.
 
